@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>69e5e867-d539-4e5d-8e5a-ea2a46b6134f</Guid>
+    <Name>ProductionOverhaul</Name>
+    <Description>Overhauls Production</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>ProductionOverhaul</AssemblyName>
+    <RootNamespace>ProductionOverhaul</RootNamespace>
+    <ProjectGuid>{14c73189-87d1-4dee-882f-dd2c3909e56c}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Config\XComEditor.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEngine.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGame.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComProduction.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComStrategyTuning.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\UILibrary_Production.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="Src\ProductionOverhaul\Classes\X2DownloadableContentInfo_ProductionOverhaul.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\ProductionOverhaul\Classes\X2StrategyElement_ProductionTechs.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Localization" />
+    <Folder Include="Config" />
+    <Folder Include="Content" />
+    <Folder Include="Src" />
+    <Folder Include="Src\ProductionOverhaul" />
+    <Folder Include="Src\ProductionOverhaul\Classes" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
