@@ -11,28 +11,16 @@ var config array<ProductionConversion> ProductionProjects;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
-	local X2ItemTemplateManager ItemTemplateManager;
-	local X2ItemTemplate ItemTemplate;
 	local array<X2DataTemplate> Techs;
 	local ProductionConversion Project;
 	local string ImageStr;
 	
-	ItemTemplateManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
-
 	foreach default.ProductionProjects(Project)
 	{
-		ItemTemplate = ItemTemplateManager.FindItemTemplate(Project.ItemName);
-
-		if (ItemTemplate == none)
-		{
-			`RedScreen(Project.ItemName $ " is an invalid template, production conversion failed!");
-			continue;
-		}
-
 		ImageStr = GetImageStr(Project.Type);
 		Techs.AddItem(CreateProductionLineTemplate(Project.ProjectName, Project.TimeDays, ImageStr));
 	}
-
+	
 	return Techs;
 }
 
